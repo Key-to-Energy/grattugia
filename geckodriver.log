@@ -1,0 +1,342 @@
+1648628097677	geckodriver	INFO	Listening on 127.0.0.1:56589
+1648628100710	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "56590" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofilewvXxM8"
+*** You are running in headless mode.
+1648628152579	geckodriver	INFO	Listening on 127.0.0.1:56694
+1648628155600	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--headless" "--remote-debugging-port" "56695" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofileFV6RcJ"
+*** You are running in headless mode.
+1648628156486	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usr-GSE-2020\\AppData\\Local\\Temp\\rust_mozprofileFV6RcJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56695/devtools/browser/e0c6ce46-0f20-48ac-b4b1-b46e8b6f44b9
+1648628158498	Marionette	INFO	Listening on port 56700
+1648628158852	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://id.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1776567125, line 1: EvalError: call to eval() blocked by CSP
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1536833907, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1536833907, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1536833907, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1536833907 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1536833907 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=86616394, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=86616394, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=86616394, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=86616394 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=86616394 line 1 > eval, line 1: unreachable code after return statement
+1648628241184	geckodriver	INFO	Listening on 127.0.0.1:56790
+1648628244243	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56791" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofileF2YsB4"
+1648628245065	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usr-GSE-2020\\AppData\\Local\\Temp\\rust_mozprofileF2YsB4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56791/devtools/browser/b8b11683-6c7e-492b-ba86-f831e8f9a2df
+1648628247446	Marionette	INFO	Listening on port 56796
+1648628247962	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://id.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=327277613, line 1: EvalError: call to eval() blocked by CSP
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2083394612, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2083394612, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2083394612, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2083394612 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2083394612 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=14&cb=962075380, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=14&cb=962075380, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=14&cb=962075380, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=14&cb=962075380 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=14&cb=962075380 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: https://www.icis.com/Dashboard/Dashboard/dashboard-common.D854E2B017F92C767DEDBF36EC21A435.js, line 80: TypeError: e.label is undefined
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1648628400214	Marionette	INFO	Stopped listening on port 56796
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1648628406017	geckodriver	INFO	Listening on 127.0.0.1:56911
+1648628409053	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56912" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofile5rJTBg"
+1648628409836	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usr-GSE-2020\\AppData\\Local\\Temp\\rust_mozprofile5rJTBg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56912/devtools/browser/4d272533-3a29-4265-8c56-0e425dbb24a7
+1648628411977	Marionette	INFO	Listening on port 56919
+1648628412303	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://id.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=224279540, line 1: EvalError: call to eval() blocked by CSP
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=389672612, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=389672612, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=389672612, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=389672612 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=389672612 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698 line 1 > eval, line 1: unreachable code after return statement
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+console.error: (new InvalidStateError("JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment", (void 0), 327))
+InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment: _createTargetActor/<@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:327:12
+newListener@resource://devtools/shared/event-emitter.js:173:27
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+destroy@resource://devtools/server/actors/targets/window-global.js:743:10
+module.exports/proto.destroy@resource://devtools/server/actors/targets/target-actor-mixin.js:244:30
+instantiate@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:242:26
+handleEvent@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:651:12
+
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=202306809, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=202306809, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=202306809, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=202306809 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=202306809 line 1 > eval, line 1: unreachable code after return statement
+console.warn: "Async method failed in safeAsyncMethod" (new Error("Connection closed, pending request to server0.conn0.windowGlobal2147483662/layout25, type getGrids failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:292:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ngetAllGrids@resource://devtools/client/fronts/layout.js:171:17\nexports.safeAsyncMethod/<@resource://devtools/shared/async-utils.js:61:25\ngetGrids@resource://devtools/client/inspector/grids/grid-inspector.js:449:35\n", "resource://devtools/shared/protocol/Front.js", 106))
+console.error: (new InvalidStateError("JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment", (void 0), 327))
+InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment: _createTargetActor/<@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:327:12
+newListener@resource://devtools/shared/event-emitter.js:173:27
+_emit@resource://devtools/shared/event-emitter.js:244:34
+emit@resource://devtools/shared/event-emitter.js:190:18
+emit@resource://devtools/shared/event-emitter.js:342:18
+destroy@resource://devtools/server/actors/targets/window-global.js:743:10
+module.exports/proto.destroy@resource://devtools/server/actors/targets/target-actor-mixin.js:244:30
+instantiate@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:242:26
+handleEvent@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:651:12
+
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1919290698 line 1 > eval, line 1: unreachable code after return statement
+JavaScript error: resource://devtools/client/framework/toolbox.js, line 3369: TypeError: data.frameData.id is null
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1648641904988	Marionette	INFO	Stopped listening on port 56919
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 14136, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1648641923601	geckodriver	INFO	Listening on 127.0.0.1:57895
+1648641926627	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57896" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofileNanm0H"
+1648641927425	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usr-GSE-2020\\AppData\\Local\\Temp\\rust_mozprofileNanm0H\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:57896/devtools/browser/f2428a86-fd82-4ba1-9c6a-8fc9e10f2b5f
+1648641929310	Marionette	INFO	Listening on port 57901
+1648641929375	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://id.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1931461005, line 1: EvalError: call to eval() blocked by CSP
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1641840351, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1641840351, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1641840351 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=575386542, line 1: unreachable code after return statement
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1648642210126	Marionette	INFO	Stopped listening on port 57901
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1648642236872	geckodriver	INFO	Listening on 127.0.0.1:60746
+1648642239898	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60747" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofileJcxggz"
+1648642240754	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usr-GSE-2020\\AppData\\Local\\Temp\\rust_mozprofileJcxggz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60747/devtools/browser/e29a4142-0224-405e-b4dd-48d017e95faa
+1648642243112	Marionette	INFO	Listening on port 60752
+1648642243630	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://id.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=227280680, line 1: EvalError: call to eval() blocked by CSP
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1806649151, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1806649151, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1806649151, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1806649151 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1806649151 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2086085089, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2086085089, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2086085089, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2086085089 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2086085089 line 1 > eval, line 1: unreachable code after return statement
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1648642489923	Marionette	INFO	Stopped listening on port 60752
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1648642494680	geckodriver	INFO	Listening on 127.0.0.1:60916
+1648642497738	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60917" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofileEZhAix"
+1648642498502	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usr-GSE-2020\\AppData\\Local\\Temp\\rust_mozprofileEZhAix\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60917/devtools/browser/84defcd1-de5b-4bac-a486-6111f52f3802
+1648642500389	Marionette	INFO	Listening on port 60922
+1648642500568	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://id.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=402805318, line 1: EvalError: call to eval() blocked by CSP
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=408936025, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=408936025, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=408936025, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=408936025 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=408936025 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=898423705, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=898423705, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=898423705, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=898423705 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=898423705 line 1 > eval, line 1: unreachable code after return statement
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+1648642604575	Marionette	INFO	Stopped listening on port 60922
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Child][PContentChild] Error: Send(msgname=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+1648642609471	geckodriver	INFO	Listening on 127.0.0.1:61091
+1648642612523	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61092" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofileczAxCN"
+1648642613290	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usr-GSE-2020\\AppData\\Local\\Temp\\rust_mozprofileczAxCN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61092/devtools/browser/12199f58-ac93-4ae7-aa49-49260688d074
+1648642615305	Marionette	INFO	Listening on port 61098
+1648642615719	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://id.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2028976069, line 1: EvalError: call to eval() blocked by CSP
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1620541781, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1620541781, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1620541781 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=845051785, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=845051785, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=845051785 line 1 > eval, line 1: unreachable code after return statement
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1648642716861	Marionette	INFO	Stopped listening on port 61098
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1648642723031	geckodriver	INFO	Listening on 127.0.0.1:61237
+1648642726095	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61238" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofileTfZXYI"
+1648642726834	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usr-GSE-2020\\AppData\\Local\\Temp\\rust_mozprofileTfZXYI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61238/devtools/browser/4afdee86-973f-4d36-ad3d-f2ca5bba3b3b
+1648642728777	Marionette	INFO	Listening on port 61243
+1648642729309	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://id.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=508144425, line 1: EvalError: call to eval() blocked by CSP
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1123811795, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1123811795, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1123811795, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1123811795 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=1123811795 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2101741790, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2101741790, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2101741790, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2101741790 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2101741790 line 1 > eval, line 1: unreachable code after return statement
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1648642995568	Marionette	INFO	Stopped listening on port 61243
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PHttpChannel::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1648643030360	geckodriver	INFO	Listening on 127.0.0.1:61486
+1648643033597	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61487" "-no-remote" "-profile" "C:\\Users\\USR-GS~1\\AppData\\Local\\Temp\\rust_mozprofilePHAIax"
+1648643034307	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usr-GSE-2020\\AppData\\Local\\Temp\\rust_mozprofilePHAIax\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61487/devtools/browser/c742d86c-931e-4300-b338-abe1473f4a09
+1648643036468	Marionette	INFO	Listening on port 61492
+1648643036797	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://id.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1468528467, line 1: EvalError: call to eval() blocked by CSP
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://id.icis.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.0.min.js, line 4: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=2024607816, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=2024607816, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=2024607816, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=2024607816 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://www.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=3&cb=2024607816 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1011159863, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1011159863, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1011159863, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1011159863 line 1 > eval, line 1: unreachable code after return statement
+JavaScript warning: https://subscriber.icis.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=1011159863 line 1 > eval, line 1: unreachable code after return statement
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1648643190774	Marionette	INFO	Stopped listening on port 61492
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DestroyBrowsingContextGroup) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+

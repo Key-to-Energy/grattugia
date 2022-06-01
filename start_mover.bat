@@ -1,0 +1,1 @@
+python file_mover.py >> log_mover.txt
