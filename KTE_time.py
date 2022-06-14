@@ -1,7 +1,7 @@
 import datetime as dt
 import pandas as pd
 import time
-from dateutil.easter import *
+from dateutil.easter import easter
 from dateutil.rrule import rrule, HOURLY
 
 import settings_and_imports as setting
