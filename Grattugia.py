@@ -17,19 +17,14 @@ import numpy as np
 
 # Parametri per la localizzazione dei file scaricati
 user = 'Usr-GSE-2020'
-download_path= 'C:\\Users\\' + user + '\\Downloads\\'
+download_path = 'C:\\Users\\' + user + '\\Downloads\\'
 logging.basicConfig(filename='log_error.txt', level=logging.ERROR)
 logging.basicConfig(filename='log.txt', level=logging.INFO)
 
 
+def add_noise(x, columns, noise_curve):
+    return x[columns] - noise_curve['Random number daily'].values[0]
 
-
-def add_noise(x):
-    n = random.random()
-    if n % 2 == 0:
-        return round(x + 0.1, 4)
-    else:
-        return round(x - 0.1, 4)
 
 def add_noise_to_df(df):
     list_of_column_names = df.columns.to_list()
@@ -57,7 +52,7 @@ def make_artesian_dict_forward(df_heren, list_of_products_names):
     return dict_artesian
 
 
-def xlsx_to_df(xlsx, colonne = None, righe = None, sheet=""):
+def xlsx_to_df(xlsx, colonne=None, righe=None, sheet=""):
     df = pd.read_excel(xlsx, index_col=None, sheet_name=sheet, usecols=colonne, skiprows=righe)
     df.drop(columns=df.columns[0], inplace=True)
     df.drop(index=range(int(df.loc[df['Date'].isna()].index.to_list()[0]), len(df)), inplace=True)
@@ -81,7 +76,8 @@ def make_df_of_days(day_one):
 
 def download_heren_data():
     lst_workspaces = ['ui-id-2', 'ui-id-3', 'ui-id-4', 'ui-id-5', 'ui-id-6']
-    lst_div = ['workspace-2-widget-2', 'workspace-4-widget-2', 'workspace-5-widget-3', 'workspace-6-widget-4', 'workspace-7-widget-5']
+    lst_div = ['workspace-2-widget-2', 'workspace-4-widget-2', 'workspace-5-widget-3', 'workspace-6-widget-4',
+               'workspace-7-widget-5']
     chrome_options = Options()
     browser = webdriver.Chrome(executable_path='C:\\Users\\' + user + '\\Desktop\\Grattugia\\chromedriver.exe')
     browser.maximize_window()
@@ -91,8 +87,8 @@ def download_heren_data():
     elem.send_keys('claudio.milo@ast.arvedi.it')
     elem = browser.find_element(By.ID, 'password-input')  # Find the search box
     elem.send_keys('Gefs2019' + Keys.ENTER)
-	
-    try:    
+
+    try:
         time.sleep(8)
         browser.find_element(By.XPATH, "/html/body/div[12]/button[1]").click()
     except:
@@ -102,7 +98,7 @@ def download_heren_data():
         browser.find_element(By.ID, workspace).click()  # Find the search box
         time.sleep(16)
         xpath_string = "//div[@id='" + lst_div[i] + "']/div/div/span[6]"
-        aux = browser.find_element(By.XPATH, xpath_string) # Find the search box
+        aux = browser.find_element(By.XPATH, xpath_string)  # Find the search box
         aux.click()
         time.sleep(1)
         try:
@@ -144,7 +140,7 @@ def read_heren_data():
                 df_heren = pd.merge(df_heren, df_tmp, left_index=True, right_index=True)
         except TypeError:
             pass
-        #move_file(file_path)
+        # move_file(file_path)
     return df_heren
 
 
@@ -172,19 +168,21 @@ def fill_holidays(df, df_in, colonna):
             row[0] = df_in.loc[nearest_working_day(index, delta=-1), colonna]
     return df
 
+
 def make_curva_spot(df_heren, colonna):
     oggi = datetime.datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
     start_date = datetime.datetime(oggi.year - 1, oggi.month, oggi.day)
     df_aux = make_df_of_days(nearest_working_day(start_date))
     df_out = pd.merge(df_aux, df_heren[colonna]
-                            .reindex(df_heren.index.union([nearest_working_day(oggi, 0)]))
-                            .shift(),
+                      .reindex(df_heren.index.union([nearest_working_day(oggi, 0)]))
+                      .shift(),
                       right_index=True, left_index=True, how='left')
     return df_out
 
 
 def split_psv_ttf(df_heren):
-    return df_heren.loc[:, df_heren.columns.str.startswith('PSV')], df_heren.loc[:, df_heren.columns.str.startswith('TTF')]
+    return df_heren.loc[:, df_heren.columns.str.startswith('PSV')], df_heren.loc[:,
+                                                                    df_heren.columns.str.startswith('TTF')]
 
 
 def codifica_month(data, offset):
@@ -199,7 +197,7 @@ def codifica_season(data, offset):
         if data.month < 4:
             return 'Win-' + datetime.datetime(year=data.year, month=data.month, day=data.day).strftime('%y')
         else:
-            data = data + pd.DateOffset(years = 1)
+            data = data + pd.DateOffset(years=1)
             return 'Win-' + datetime.datetime(year=data.year, month=data.month, day=data.day).strftime('%y')
 
     else:
@@ -262,3 +260,20 @@ def move_file(file_path):
         print('Cartella già creata')
     finally:
         shutil.move(file_path, os.path.join("Y:\Abagas-G", datetime.datetime.now().strftime('%Y-%m-%d'), file))
+
+
+def genera_date_in_range(start, end):
+    delta = end - start
+    date_list = [end - datetime.timedelta(days=x) for x in range(delta.days)]
+    return date_list
+
+def genera_curva_random():
+    start_date = '2020-01-01'
+    end_date = '2050-01-01'
+    start = datetime.datetime.strptime(start_date, '%Y-%m-%d')
+    end = datetime.datetime.strptime(end_date, '%Y-%m-%d')
+    arr_of_date = genera_date_in_range(start, end)
+    dict_to_artesian = dict()
+    for day in arr_of_date:
+        dict_to_artesian[day] = round(random.uniform(-0.1, 0.1), 2)
+    kta.post_artesian_actual_time_series(dict_to_artesian, dict(), 'DevKtE', 'Random number daily', 'd')
