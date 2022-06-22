@@ -23,7 +23,8 @@ logging.basicConfig(filename='log.txt', level=logging.INFO)
 
 
 def add_noise(x, columns, noise_curve):
-    return x[columns] - noise_curve['Random number daily'].values[0]
+    valore = x[columns] - noise_curve.loc[x.name.tz_localize(tz='Europe/Stockholm')]['Random number daily']
+    return valore
 
 
 def add_noise_to_df(df):

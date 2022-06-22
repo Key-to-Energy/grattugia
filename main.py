@@ -5,7 +5,7 @@ import datetime as dt
 
 noise_curve = kta.get_artesian_data_actual([100239002], '2020-01-01',
                                            '2050-01-01', 'd')
-noise_curve = kta.format_artesian_data(noise_curve)
+noise_curve = kta.format_artesian_data(noise_curve).set_index('Date')
 
 logging.basicConfig(filename='log.txt', level=logging.INFO)
 logging.info('Run del ' + dt.datetime.today().strftime('%y-%m-%d'))
