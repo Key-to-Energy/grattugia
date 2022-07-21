@@ -265,12 +265,24 @@ def split_psv_ttf(df_heren):
 
 
 def codifica_month(data, offset):
+    '''
+    Codifica il nome del mese nel formato utile ad artesian
+    :param data: Datetime contenente la data d'emissione del dato
+    :param offset: Numero di mesi di distanza tra la data d'emissione del dato e la data a cui il dato si riferisce
+    :return: Stringa contenete la corretta codifica del dato secondo lo standar richiesto da Artesian
+    '''
     data = data + pd.DateOffset(months=offset)
     mese = datetime.datetime(year=data.year, month=data.month, day=data.day).strftime('%b')
     return mese + '-' + datetime.datetime(year=data.year, month=data.month, day=data.day).strftime('%y')
 
 
 def codifica_season(data, offset):
+    '''
+    Codifica il nome della season nel formato utile ad artesian
+    :param data: Datetime contenente la data d'emissione del dato
+    :param offset: Numero di season di distanza tra la data d'emissione del dato e la data a cui il dato si riferisce
+    :return: Stringa contenete la corretta codifica del nome del dato secondo lo standar richiesto da Artesian
+    '''
     data = data + pd.DateOffset(months=offset * 6)
     if data.month < 4 or data.month > 9:
         if data.month < 4:
@@ -284,16 +296,34 @@ def codifica_season(data, offset):
 
 
 def codifica_quarter(data, offset):
+    '''
+    Codifica il nome del quarter nel formato utile ad artesian
+    :param data: Datetime contenente la data d'emissione del dato
+    :param offset: Numero di quarter di distanza tra la data d'emissione del dato e la data a cui il dato si riferisce
+    :return: Stringa contenete la corretta codifica del nome del dato secondo lo standar richiesto da Artesian
+    '''
     data = data + pd.DateOffset(months=offset * 3)
     return 'Q' + str(data.quarter) + datetime.datetime(year=data.year, month=data.month, day=data.day).strftime('%y')
 
 
 def codifica_year(data, offset):
+    '''
+    Codifica il nome dell'anno nel formato utile ad artesian
+    :param data: Datetime contenente la data d'emissione del dato
+    :param offset: Numero di anni di distanza tra la data d'emissione del dato e la data a cui il dato si riferisce
+    :return: Stringa contenete la corretta codifica del nome del dato secondo lo standar richiesto da Artesian
+    '''
     data = data + pd.DateOffset(years=offset)
     return datetime.datetime(year=data.year, month=data.month, day=data.day).strftime('%Y')
 
 
 def codifica_colonna(nome_colonna, data):
+    '''
+    Codifica il nome della colonna nel formato utile ad artesian
+    :param nome_colonna: Nome della colonna da formattare
+    :param data: Datetime rappresentante la data a cui il dato si riferisce
+    :return: Stringa contenete la corretta codifica del nome del dato secondo lo standar richiesto da Artesian
+    '''
     prodotto = nome_colonna.split(' ')[3]
     if prodotto == 'Season':
         offset = int(nome_colonna.split(' ')[4][1])
@@ -315,6 +345,11 @@ def codifica_colonna(nome_colonna, data):
 
 
 def get_market_assestments_artesian_dict(df):
+    '''
+    Rende il dizionario utile al caricamento dei dati contenuti in un dataframe nel formato di MarketAssessment
+    :param df: Dataframe contenente i dati della MarketAssessment da caricare
+    :return: Dizionario utile al caricamento dei dati in Artesian
+    '''
     dict_of_market_assestments = dict()
     for index, row in df.iterrows():
         list_of_column_names = row.index.to_list()
@@ -331,6 +366,11 @@ def get_market_assestments_artesian_dict(df):
 
 
 def move_file(file_path):
+    '''
+    Sposta i file presenti nella cartella 'file_path' nella cartella corretta in Abags-g su condivisa
+    :param file_path: Path contenente i file da spostare
+    :return: None
+    '''
     file = os.path.basename(file_path)
     try:
         path_to = os.path.join("Y:\Abagas-G", datetime.datetime.now().strftime('%Y-%m-%d'))
@@ -342,12 +382,22 @@ def move_file(file_path):
 
 
 def genera_date_in_range(start, end):
+    '''
+    Genera un array di date comprese tra le due date passate come parametro
+    :param start: Datetime rappresentante la data d'inizio
+    :param end: Datetime rappresentante la data di fine
+    :return: Array contenente le date comprese nell'intervallo passato come input
+    '''
     delta = end - start
     date_list = [end - datetime.timedelta(days=x) for x in range(delta.days)]
     return date_list
 
 
 def genera_curva_random():
+    '''
+    Funzione per generare su Artesian una time series con valori randomici dal 1 gennaio 2020 al 1 gennaio 2025
+    :return: None
+    '''
     start_date = '2020-01-01'
     end_date = '2050-01-01'
     start = datetime.datetime.strptime(start_date, '%Y-%m-%d')
