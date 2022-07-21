@@ -16,13 +16,21 @@ import shutil
 import numpy as np
 
 # Parametri per la localizzazione dei file scaricati
-user = 'Usr-GSE-2020'
+user = 'M.Serra'
 download_path = 'C:\\Users\\' + user + '\\Downloads\\'
+CHROME_PATH = 'C:\\Users\\' + user + '\\Documents\\Grattuggia\\chromedriver.exe'
 logging.basicConfig(filename='log_error.txt', level=logging.ERROR)
 logging.basicConfig(filename='log.txt', level=logging.INFO)
 
 
 def add_noise(x, columns, noise_curve):
+    '''
+    Funzione che aggiunge il rumore alle curve in base alla data
+    :param x: Tupla il cui valore va sporcato
+    :param columns: Nome colonna da modificare
+    :param noise_curve: Curva del rumore da applicare
+    :return: float o int a seconda dei tipi del valore contenuto nella tupla e nella noise curve
+    '''
     valore = x[columns] - noise_curve.loc[x.name.tz_localize(tz='Europe/Stockholm')]['Random number daily']
     return valore
 
@@ -35,6 +43,12 @@ def add_noise_to_df(df):
 
 
 def make_artesian_dict(df, colonna):
+    '''
+    Rende un dizionario utile per il caricamento dei dati su Artesian a partire da un pandas df con datetime come index
+    :param df: Pandas dataframe da convertire in dizionario
+    :param colonna: Nome della colonna da usare come campo valore
+    :return: Dizionario utile al caricamento su Artesian
+    '''
     dict_artesian = dict()
     for index, row in df.iterrows():
         dict_artesian[datetime.datetime(index.year, index.month, index.day, index.hour)] = row[colonna]
@@ -42,6 +56,12 @@ def make_artesian_dict(df, colonna):
 
 
 def make_artesian_dict_forward(df_heren, list_of_products_names):
+    '''
+    Rende un dizionario per il caricamento di una MarketAssessment su Artesian
+    :param df_heren: Pandas dataframe da convertire in dizionario
+    :param list_of_products_names: Lista contenente il nome dei prodotti
+    :return: Dizionario utile per il caricamento dei dati su Artesian
+    '''
     df = df_heren[list_of_products_names]
     dict_artesian = dict()
     for index, row in df.iterrows():
@@ -54,6 +74,14 @@ def make_artesian_dict_forward(df_heren, list_of_products_names):
 
 
 def xlsx_to_df(xlsx, colonne=None, righe=None, sheet=""):
+    '''
+    Trasforma un xlsx preso da Icis in un Pandas dataframe
+    :param xlsx: Path o file xlsx da convertire in dataframe
+    :param colonne: Numero di colonne da prendere in considerazione
+    :param righe: Numero di righe da saltare prima d'iniziare la conversione
+    :param sheet: Foglio excel da convertire
+    :return: Pandas dataframe generato dall'excel
+    '''
     df = pd.read_excel(xlsx, index_col=None, sheet_name=sheet, usecols=colonne, skiprows=righe)
     df.drop(columns=df.columns[0], inplace=True)
     df.drop(index=range(int(df.loc[df['Date'].isna()].index.to_list()[0]), len(df)), inplace=True)
@@ -61,11 +89,23 @@ def xlsx_to_df(xlsx, colonne=None, righe=None, sheet=""):
 
 
 def gen_dates_in_two_dates(dt_start_date, dt_end_date):
+    '''
+    Genera tutte le date comprese tra i due estremi passati come input
+    :param dt_start_date: Datetime indicante il primo estremo dell'intervallo
+    :param dt_end_date: Datetime indicante l'estremo finale dell'intervallo
+    :return: Array di Datetime
+    '''
     for intDays in range(int((dt_end_date - dt_start_date).days)):
         yield dt_start_date + datetime.timedelta(intDays)
 
 
 def make_df_of_days(day_one):
+    '''
+    Rende un df vuoto con datetime come index, il dataframe parte dal giorno passato come parametro sino al prossimo
+    giorno lavorativo a partire da oggi
+    :param day_one: Datetime rappresentante il giorno di partenza
+    :return: Pandas dataframe
+    '''
     start = day_one + datetime.timedelta(days=1)
     # end = datetime.datetime.today() + datetime.timedelta(days=1)
     end = nearest_working_day(datetime.datetime.today(), 0) + datetime.timedelta(days=1)
@@ -76,11 +116,15 @@ def make_df_of_days(day_one):
 
 
 def download_heren_data():
+    '''
+    Tramite l'utilizzo di Selenium scarica i dati dal sito di Icis e mette i file nella cartella di download
+    :return:  None
+    '''
     lst_workspaces = ['ui-id-2', 'ui-id-3', 'ui-id-4', 'ui-id-5', 'ui-id-6']
     lst_div = ['workspace-2-widget-2', 'workspace-4-widget-2', 'workspace-5-widget-3', 'workspace-6-widget-4',
                'workspace-7-widget-5']
     chrome_options = Options()
-    browser = webdriver.Chrome(executable_path='C:\\Users\\' + user + '\\Desktop\\Grattugia\\chromedriver.exe')
+    browser = webdriver.Chrome(executable_path=CHROME_PATH)
     browser.maximize_window()
     actions = ActionChains(browser)
     browser.get('https://www.icis.com/Dashboard')
@@ -122,6 +166,10 @@ def download_heren_data():
 
 
 def read_heren_data():
+    '''
+    Legge i file excel relativi alla giornata odierna e li converte in un pandas dataframe
+    :return: Pandas dataframe generati dai file excel nella cartella download
+    '''
     full_path = os.path.join(download_path,
                              'ICIS Dashboard Price History ' + datetime.datetime.now().strftime('%Y-%m-%d') + '*.xls')
     files = glob.glob(full_path)
@@ -146,7 +194,13 @@ def read_heren_data():
 
 
 def nearest_working_day(day, delta=1):
-    uk_holidays = holidays.UK()
+    '''
+    Rende il prossimo giorno lavorativo dopo i giorni passati come delta secondo le festività Inglesi
+    :param day: Datetime rappresentante il giorno di partenza
+    :param delta: Numero di giorni da skippare prima di rendere il prossimo giorno lavorativo
+    :return: Datetime rappresentante il prossimo giorno lavorativo
+    '''
+    uk_holidays = holidays.England()
     day = day + datetime.timedelta(days=delta)
     if delta == 0:
         delta = 1
@@ -156,6 +210,11 @@ def nearest_working_day(day, delta=1):
 
 
 def add_row(df):
+    '''
+    Aggiunge una riga rappresentante il prossimo giorno lavorativo
+    :param df: Pandas dataframe alla quale aggiungere la nuova riga
+    :return: Pandas dataframe con la nuova riga
+    '''
     len_cols = len(df.columns)
     riga = [pd.np.nan for i in range(len_cols)]
     riga.name = nearest_working_day(df.index[-1])
@@ -164,6 +223,13 @@ def add_row(df):
 
 
 def fill_holidays(df, df_in, colonna):
+    '''
+    Copre i buchi dei weekend nelle curve spot
+    :param df: Dataframe con in buchi
+    :param df_in: Dataframe con i dati relativi al weekend
+    :param colonna: Nome della colonna contenente i dati del weekend
+    :return: Dataframe spot aggiornato di dati weekend
+    '''
     for index, row in df.iterrows():
         if np.isnan(row[0]):
             row[0] = df_in.loc[nearest_working_day(index, delta=-1), colonna]
@@ -171,6 +237,12 @@ def fill_holidays(df, df_in, colonna):
 
 
 def make_curva_spot(df_heren, colonna):
+    '''
+    Crea la curva spot con i dati day-ahead, lasciando buchi nei weekend e giorni di festa
+    :param df_heren: Dataframe dalla quale estrarre i dati day-ahead
+    :param colonna: Colonna contenente i dati dei day-ahead
+    :return: Dataframe contenente i dati day-ahead spot
+    '''
     oggi = datetime.datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
     start_date = datetime.datetime(oggi.year - 1, oggi.month, oggi.day)
     df_aux = make_df_of_days(nearest_working_day(start_date))
@@ -182,6 +254,12 @@ def make_curva_spot(df_heren, colonna):
 
 
 def split_psv_ttf(df_heren):
+    '''
+    Splitta in 2 dataframe il dataframe il df passato come input in 2 dataframe,
+    uno relativo al psv ed uno relativo al ttf
+    :param df_heren: Dataframe contenente i dati Icis
+    :return: Tupla (Dataframe_psv, Dataframe_ttf)
+    '''
     return df_heren.loc[:, df_heren.columns.str.startswith('PSV')], df_heren.loc[:,
                                                                     df_heren.columns.str.startswith('TTF')]
 
@@ -267,6 +345,7 @@ def genera_date_in_range(start, end):
     delta = end - start
     date_list = [end - datetime.timedelta(days=x) for x in range(delta.days)]
     return date_list
+
 
 def genera_curva_random():
     start_date = '2020-01-01'
