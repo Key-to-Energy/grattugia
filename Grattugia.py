@@ -14,6 +14,7 @@ import os
 import logging
 import shutil
 import numpy as np
+import utility as ktu
 
 # Parametri per la localizzazione dei file scaricati
 user = 'M.Serra'
@@ -235,6 +236,12 @@ def fill_holidays(df, df_in, colonna):
             if np.isnan(row[0]):
                 row[0] = df_in.loc[nearest_working_day(index, delta=-1), colonna]
         except KeyError as e:
+            ktu.send_mail_ez('', 'smtp.gmail.com', '587', 'jobs@keytoenergy.it', 'FG++h-y4,P9Ub"%o,{d5*FIhQLi',
+                             'jobs@keytoenergy.it', ['mirco.serra@keytoenergy.it',
+                                                    'giordano.volpini@keytoenergy.it'],
+                             'Grattugia in errore',
+                             'Attenzione!!\n La Grattuggia non ha potuto girare a di un indice o un nome colonna '
+                             'errato' + str(e))
             logging.error(e)
 
     return df
