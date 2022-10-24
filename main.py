@@ -15,13 +15,13 @@ logging.info('Run del ' + dt.datetime.today().strftime('%y-%m-%d'))
 logging.info('Start')
 
 # Chiamo la funzione di scaricamento dei dati dal sito
-#download_heren_data()
+download_heren_data()
 logging.info('Dati scaricati')
 
 # Leggo i dati dai file excel e li trasformo in un dataframe Pandas
 df_heren = read_heren_data()
 logging.info('Dati importati nel programma correttamente')
-
+df_heren = correggi_assenza_dato(df_heren)
 
 # Assegno alla futura curva spot i day-ahead
 df_spot_ttf = make_curva_spot(df_heren, 'TTF Price Assessment Day-Ahead Bid/Offer Range Daily (Mid) : EUR/MWh')

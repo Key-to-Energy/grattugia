@@ -231,8 +231,12 @@ def fill_holidays(df, df_in, colonna):
     :return: Dataframe spot aggiornato di dati weekend
     '''
     for index, row in df.iterrows():
-        if np.isnan(row[0]):
-            row[0] = df_in.loc[nearest_working_day(index, delta=-1), colonna]
+        try:
+            if np.isnan(row[0]):
+                row[0] = df_in.loc[nearest_working_day(index, delta=-1), colonna]
+        except KeyError as e:
+            logging.error(e)
+
     return df
 
 
@@ -407,3 +411,72 @@ def genera_curva_random():
     for day in arr_of_date:
         dict_to_artesian[day] = round(random.uniform(-0.1, 0.1), 2)
     kta.post_artesian_actual_time_series(dict_to_artesian, dict(), 'DevKtE', 'Random number daily', 'd')
+
+
+def correggi_assenza_dato(df):
+    df_righe_mancanti = pd.DataFrame({'PSV Price Assessment Balance of Month (BOM) Heren Bid/Offer Range Daily (Mid) : EUR/MWh':
+                           {'21-Oct-2022': 60.225},
+                       'PSV Price Assessment Day-Ahead Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 48.013},
+                       'PSV Price Assessment Month +1 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 106.15},
+                       'PSV Price Assessment Month +2 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 140.875},
+                       'PSV Price Assessment Month +3 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 148.075},
+                       'PSV Price Assessment Quarter +1 Bid/Offer Range Daily (Mid) : EUR/MWh': {
+                           '21-Oct-2022': 149.075},
+                       'PSV Price Assessment Quarter +2 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 145.7},
+                       'PSV Price Assessment Quarter +3 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 146.8},
+                       'PSV Price Assessment Quarter +4 Bid/Offer Range Daily (Mid) : EUR/MWh': {
+                           '21-Oct-2022': 149.363},
+                       'PSV Price Assessment Weekend Bid/Offer Range Weekly (Mid) : EUR/MWh': {'21-Oct-2022': 25.75},
+                       'TTF Price Assessment Month +1 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 113.7},
+                       'TTF Price Assessment Month +2 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 146.125},
+                       'TTF Price Assessment Month +3 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 151.25},
+                       'TTF Price Assessment Month +4 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 154.088},
+                       'TTF Price Assessment Month +5 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 153.25},
+                       'TTF Price Assessment Month +6 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 147.45},
+                       'TTF Price Assessment Quarter +1 Bid/Offer Range Daily (Mid) : EUR/MWh': {
+                           '21-Oct-2022': 152.863},
+                       'TTF Price Assessment Quarter +2 Bid/Offer Range Daily (Mid) : EUR/MWh': {
+                           '21-Oct-2022': 147.375},
+                       'TTF Price Assessment Quarter +3 Bid/Offer Range Daily (Mid) : EUR/MWh': {
+                           '21-Oct-2022': 148.725},
+                       'TTF Price Assessment Quarter +4 Bid/Offer Range Daily (Mid) : EUR/MWh': {
+                           '21-Oct-2022': 147.738},
+                       'TTF Price Assessment Quarter +10 Bid/Offer Range Daily (Mid) : EUR/MWh': {
+                           '21-Oct-2022': 73.763},
+                       'TTF Price Assessment Quarter +5 Bid/Offer Range Daily (Mid) : EUR/MWh': {
+                           '21-Oct-2022': 140.113},
+                       'TTF Price Assessment Quarter +6 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 103.6},
+                       'TTF Price Assessment Quarter +7 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 98.6},
+                       'TTF Price Assessment Quarter +8 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 99.225},
+                       'TTF Price Assessment Quarter +9 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 98.975},
+                       'TTF Price Assessment Year +1 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 149.175},
+                       'TTF Price Assessment Year +2 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 110.388},
+                       'TTF Price Assessment Year +3 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 77.9},
+                       'TTF Price Assessment Year +4 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 46.788},
+                       'TTF Price Assessment Season +1 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 148.05},
+                       'TTF Price Assessment Season +10 Bid/Offer Range Daily (Mid) : EUR/MWh':
+                           {'21-Oct-2022': float('nan')},
+                       'TTF Price Assessment Season +2 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 143.925},
+                       'TTF Price Assessment Season +3 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 101.1},
+                       'TTF Price Assessment Season +4 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 99.1},
+                       'TTF Price Assessment Season +5 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 70.475},
+                       'TTF Price Assessment Season +6 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 69.775},
+                       'TTF Price Assessment Season +7 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 39.375},
+                       'TTF Price Assessment Season +8 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 39.775},
+                       'TTF Price Assessment Season +9 Bid/Offer Range Daily (Mid) : EUR/MWh':
+                           {'21-Oct-2022': float('nan')},
+                       'PSV Price Assessment Gasyear +1 Bid/Offer Range Daily (Mid) : EUR/MWh': {
+                           '21-Oct-2022': 125.288},
+                       'PSV Price Assessment Season +1 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 146.25},
+                       'PSV Price Assessment Season +2 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 145.725},
+                       'PSV Price Assessment Season +3 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 104.838},
+                       'PSV Price Assessment Year +1 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 147.738},
+                       'PSV Price Assessment Year +2 Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 111.313},
+                       'TTF Price Assessment Balance of Month (BOM) Heren Bid/Offer Range Daily (Mid) : EUR/MWh':
+                           {'21-Oct-2022': 50},
+                       'TTF Price Assessment Day-Ahead Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 37.775},
+                       'TTF Price Assessment Weekend Bid/Offer Range Daily (Mid) : EUR/MWh': {'21-Oct-2022': 33.913}})
+    for index, row in df_righe_mancanti.iterrows():
+        df.loc[index] = row
+    return df
+
